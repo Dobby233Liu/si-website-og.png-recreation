@@ -30,7 +30,7 @@ export async function renderIcons(icon, fillStyle)
             // I have no idea what I'm doing LOL
             let lightness = color.lightness();
             if (lightness <= 12.5)
-                color = color.lightness(lightness == 0 ? 100 : lightness + 87.5);
+                color = color.lightness(100 - lightness);
             else if (lightness <= 20)
                 color = color.lighten(1);
         case "colorized":
