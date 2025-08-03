@@ -20,11 +20,11 @@ const subst = {
     "virb": "googledisplayandvideo360", // idk
     "twitter": "x",
     "wii": "twitch",
-    "twilio": "rss",
+    "twilio": "folo",
     "x-dot-org": "xdotorg",
     "webcomponents-dot-org": "webcomponentsdotorg",
     "trip-dot-com": "tripdotcom",
-    "xamarin": "shadcnui"
+    "xamarin": "chakraui"
 }
 
 export const SURROUNDING_ICONS = [
