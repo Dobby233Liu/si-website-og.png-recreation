@@ -28,9 +28,10 @@ export async function renderIcons(icon, fillStyle)
     {
         case "colorized-light":
             // I have no idea what I'm doing LOL
-            if (color.luminosity() <= 0.005)
-                color = color.negate();
-            else if (color.luminosity() <= 0.02)
+            let lightness = color.lightness();
+            if (lightness <= 12.5)
+                color = color.lightness(lightness == 0 ? 100 : lightness + 87.5);
+            else if (lightness <= 20)
                 color = color.lighten(1);
         case "colorized":
             svg = svg.replace("<svg", `<svg fill="${color.hex()}"`);
