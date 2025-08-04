@@ -19,17 +19,19 @@ async function paintIconBox(canvas)
     const gapSize = maxDim * design.GAP_SIZE;
     const largeIconSize = maxDim * design.LARGE_ICON_SIZE;
 
-    const xStart = (w - fullWPresumed) / 2;
-    const yStart = (h - fullHPresumed) / 2;
+    const xOff = (w - fullWPresumed) / 2;
+    const yOff = (h - fullHPresumed) / 2;
     const posInc = gapSize + iconSize;
 
-    let x = xStart + gapSize, y = yStart + gapSize;
+    let x = xOff + gapSize + iconSize / 2, y = yOff + gapSize + iconSize / 2;
+    const xStart = x;
+
     async function drawIcon(slug, size=iconSize, fillStyle="colorized-light")
     {
         const img = await renderIcon(slug, fillStyle);
         const aspectRatio = img.width/img.height;
         const iconW = size*aspectRatio, iconH = size;
-        ctx.drawImage(img, x, y, iconW, iconH);
+        ctx.drawImage(img, x - iconW/2, y - iconH/2, iconW, iconH);
     }
 
     for (const row of design.SURROUNDING_ICONS)
@@ -40,12 +42,12 @@ async function paintIconBox(canvas)
                 await drawIcon(slug);
             x += posInc;
         }
-        x = xStart + gapSize;
+        x = xStart;
         y += posInc;
     }
 
-    x = xStart + fullWPresumed / 2 - largeIconSize / 2;
-    y = yStart + fullHPresumed / 2 - largeIconSize / 2;
+    x = xOff + fullWPresumed / 2;
+    y = yOff + fullHPresumed / 2;
     await drawIcon(design.LARGE_ICON, largeIconSize, "light");
 }
 
@@ -53,4 +55,4 @@ const canvas = new Canvas(...design.IMG_DIMS);
 const win = new Window({ canvas: canvas });
 
 await paintIconBox(canvas);
-await canvas.saveAs("og.png");
+await canvas.saveAs("og.svg");

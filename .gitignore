@@ -144,3 +144,4 @@ vite.config.ts.timestamp-*
 
 # output
 og.png
+og.svg
