@@ -1,24 +1,18 @@
 {
-  "name": "si-website-og.png-recreation",
-  "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "packageManager": "npm@11.5.2+sha512.aac1241cfc3f41dc38780d64295c6c6b917a41e24288b33519a7b11adfc5a54a5f881c642d7557215b6c70e01e55655ed7ba666300fd0238bc75fb17478afaf3",
-  "dependencies": {
-    "color": "^5.0.0",
-    "simple-icons": "^15.9.0",
-    "skia-canvas": "^2.0.2"
-  },
-  "devDependencies": {
-    "copy-paste": "^2.2.0",
-    "simple-icons-v4": "npm:simple-icons@^4.25.0"
-  }
+    "name": "si-website-og.png-recreation",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "main": "index.js",
+    "license": "MIT",
+    "packageManager": "npm@11.5.2+sha512.aac1241cfc3f41dc38780d64295c6c6b917a41e24288b33519a7b11adfc5a54a5f881c642d7557215b6c70e01e55655ed7ba666300fd0238bc75fb17478afaf3",
+    "dependencies": {
+        "color": "^5.0.0",
+        "simple-icons": "^15.9.0",
+        "skia-canvas": "^2.0.2"
+    },
+    "devDependencies": {
+        "copy-paste": "^2.2.0",
+        "simple-icons-v4": "npm:simple-icons@^4.25.0"
+    }
 }
