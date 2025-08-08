@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import icons from "./icons-by-slug.js";
 
-export const IMG_DIMS = [1200, 630];
+export const IMG_DIMS = [1200, 630]; //px
 
 // normalized to 0-1, * max(...IMG_DIMS) //
 export const ICON_SIZE = 0.04;
@@ -9,13 +9,13 @@ export const LARGE_ICON_SIZE = ICON_SIZE * 3;
 
 // gap between icons on both axises
 // note that icons' origin point are (0.5, 0.5)
-export const GAP_SIZE = ICON_SIZE;
+export const GAP_SIZE = 0.04;
 
 // always in center
 // bg color = brand color of this icon
 export const LARGE_ICON = "simpleicons";
 
-// icons that were in v4 but are obsolete -> random available icons in latest
+// maps icons that were in v4 but are obsolete to random available icons in latest
 const subst = {
     "virb": "googledisplayandvideo360", // idk
     "twitter": "x",
