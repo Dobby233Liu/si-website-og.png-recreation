@@ -20,7 +20,7 @@ async function renderSvg(svg)
 /**
  * Renders an icon with the specified fill style.
  * 
- * @param {string|Object} icon - The icon to render. Can be either a string (icon ID) or an icon object containing svg and hex properties.
+ * @param {string|import("simple-icons").SimpleIcon} icon - The icon to render. Can be either a string (icon ID) or an icon object containing svg and hex properties.
  * @param {"colorized"|"colorized-light"|"light"} [fillStyle="light"] - The fill style to apply to the icon.
  * @returns {Promise} A promise that resolves with the rendered SVG.
  * @throws {Error} Throws an error if the specified icon ID does not exist in the icons object.
